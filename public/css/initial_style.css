@@ -1,0 +1,270 @@
+html, body 
+{
+    height: 100%;
+    margin: 0;
+    background-color: #f8f8f8 !important;
+    color: #888;
+}
+.my-form-box
+{
+    width: 100%; 
+    max-width:450px;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+.pointer
+{
+    cursor: pointer;
+}
+.hidden
+{
+    display: none;
+}
+.wrapper 
+{
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+.header, .content, .footer 
+{
+  display: table-row;
+}
+.navbar
+{
+    min-height: 80px;
+}
+.speechBubbles 
+{
+    background-color: transparent;            
+    display: table;
+    text-align: center;
+}
+.speechContent 
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+.formHeading
+{ 
+    color: #fc8a9e !important;
+    padding-bottom: 10px;
+    font-size: large;
+}
+.registrationParagraph
+{
+    padding-bottom: 10px;
+}
+.registerHeading
+{
+    color: #fc8a9e !important;
+    font-size: large;
+}
+.askIfHaveAccountlogin
+{
+    font-size: large;
+}
+.my-pink, .askIfHaveAccountlogin
+{
+    color: #fc8a9e !important;
+}
+.ss-sand
+{
+    background-color: #f0ebe6 !important;
+    border-radius: 5px;
+    padding: .3em;
+    width: 100%;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075) !important;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.ss-sand:focus
+{
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+.rowWithLabels
+{
+    margin-top: -15px; 
+    color: #888 !important;  
+}
+label
+{
+    color: #888 !important; 
+}
+@media only screen and (min-width: 768px) 
+{
+    .askIfHaveAccount
+    {
+        display: none;
+    }
+}
+@media only screen and (max-width: 768px) 
+{
+    #myNavbar
+    {
+        position: absolute;
+        z-index: +99999;
+        background-color: #f8f8f8 !important;
+        box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+        margin-top: 5px;
+
+    }
+    .httpMessagePlace
+    {
+        left: 30% !important;
+    }
+    .loginFrame
+    {
+        margin-top: 5%;
+        padding-bottom: 10%;
+    }
+    .registrationForm, .askIfHaveAccount
+    {
+        display: none;
+    }
+}
+.loginFrame
+{
+    padding-bottom: 10%;
+}
+@media only screen and (max-width: 500px) 
+{
+    
+    .formsPlaces
+    {
+        width: 100%;
+        padding-right: 15%;
+    }
+    .speechBubbles
+    {
+        display: none;
+    }
+    .w3-col
+    {
+        width:  100% !important;
+    }
+    .my-dob-col
+    {
+        width: 33% !important; 
+        margin-right: 0.33% !important;
+    }
+    .w3-row
+    {
+        margin-bottom: -2px !important;
+    }
+    .w3-col
+    {
+        margin-bottom: -5px !important;
+    }
+}
+.inner 
+{
+  display: table-cell;
+  border-radius: 0px !important;
+}
+.content .inner 
+{
+  height: 100%;
+  position: relative;
+}
+.scrollable 
+{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; 
+  bottom: 0;
+  overflow: auto;
+  height:auto;
+}
+.footer
+{
+    height: 15px;
+    width: 100%;
+    display: table;
+    padding-top: 1%;
+}
+.innerFooter
+{
+    display: table-cell;
+    vertical-align: middle;
+}
+.rowWithLabels
+{
+    margin-top: -15px;   
+}
+.forRegistrationErrors
+{
+    display: none;
+    list-style-type: square;
+}
+.parsley-required
+{
+    color: #ff9999;
+}
+.httpMessagePlace
+{
+    display: none;
+    position: absolute;
+    left: 65%;
+    top: 25%;
+    z-index: +1;
+    background: #343233;
+    border-radius: 19px;
+    padding: 1%;
+}
+.my-blue
+{
+    color: #3388bb;
+}
+.strong
+{
+    color: #737373;
+}
+.my-modal
+{
+    padding: 2%;
+}
+.about-us-heading
+{
+    font-weight: 600;
+    border-bottom: 3px solid #737373;
+}
+.modal-content
+{
+    color:  #595959 !important;
+}
+.rowWithForms
+{
+    margin: 10px;
+    margin-bottom: 12px !important;
+}
+/* width */
+::-webkit-scrollbar 
+{
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track 
+{
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb 
+{
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+{
+  background: #555; 
+}

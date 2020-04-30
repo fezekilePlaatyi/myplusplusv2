@@ -1,0 +1,121 @@
+.dropdown-menu
+{
+        background-color: transparent;
+        border: transparent;
+        border: none;
+}
+.dropdown-menu .dropdown-item > li > a:hover
+{
+        background-image: none;
+        background-color: #000;
+}
+.ss-brown
+{
+        background-color: #705c5c;
+}
+.navbar
+{
+        background: #5c4c4c;
+        border-radius: 0px !important;
+}
+a
+{
+        color: #f0ebe6 !important;
+}
+.dropdown-menu a:hover
+{
+        background-color: transparent;
+}
+.dropdown-menu
+{
+        width: 300px;
+        padding: 5% !important;
+}
+body
+{
+        background-color: #E8E8E8;
+}
+.loginFormHeader
+{
+        background-color: #f0ebe6 !important;
+        margin-bottom: 3%;
+        width: 100%;
+        padding:0.01em 16px
+}
+.formArea
+{
+        margin-left: 22%;
+        margin-top: 3%;
+        margin-right: 22%;
+}
+.ss-brown-color
+{
+        color: #705c5c;
+}
+.ss-sand
+{
+        background-color: #f0ebe6 !important;
+}
+.hidden
+{
+        display: none;
+}
+.ss-sand-color
+{
+        color: #f0ebe6 !important;
+}
+.greenColor
+{
+        color: #00b3b3;
+        /* text-shadow: 1px 1px 2px #000000; */
+}
+.underline
+{
+        text-decoration: underline;
+}
+.padding-top
+{
+        margin-top: 4%;
+}
+.chatPage
+{
+        border: 2px solid grey;
+        margin-top: -20px;
+
+}
+.chatHistoryPlace, .messageBox
+{
+         border-right: 2px solid grey;
+         height: 431.5px;
+}
+.bars-container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    color: #00b3b3;
+    /* /text-shadow: 1px 1px 2px #000000; */
+    background-color: #00b3b3;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}

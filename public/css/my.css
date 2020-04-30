@@ -1,0 +1,42 @@
+.my-container-center
+{
+  	position: absolute;
+  	margin: auto;
+  	right: 0;
+  	left: 0;
+}
+.my-container-fullscreen 
+{
+    /* Height and width fallback for older browsers. */
+    height: 100%;
+    width: 100%;
+    display: none;
+    
+    /* Set the height to match that of the viewport. */
+    height: 100vh;
+    
+    /* Set the width to match that of the viewport. */
+    width: 100vw;
+    
+    /* Remove any browser-default margins. */
+    margin: 0;
+    background: green;
+    z-index: +1;
+    position: absolute;
+}
+.my-dialog-box
+{
+
+  	width: 600px;
+  	height: calc(90vh - 5px);
+  	background-color: #F5F5F5;
+  	border-radius: 3px;
+  	top: 5;
+  	display: none;
+}
+.my-dialog-close
+{
+	color: #696969;
+	margin-top: .5%;
+	margin-right: 1.2%;
+}
