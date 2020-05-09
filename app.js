@@ -637,7 +637,6 @@ app.post('/feeds/getSingleWIthComments', feeds.getSingleWIthComments);
 app.post('/feeds/deleteFeedNotification', feeds.deleteFeedNotification);
 
 
-// var server = require('http').createServer(app)
 http.createServer(function(req, res) {
     res.writeHead(301, {"Location": "https://" + req.headers['host'] + req.url});
     res.end();
