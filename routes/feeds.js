@@ -15,8 +15,6 @@ const multer = Multer({
   },
 });
 
-
-
 exports.insertFeedPost = function(req, res, next)
 {
     var user =  req.session.user,
@@ -131,34 +129,7 @@ exports.insertFeedImage = function(req, res, next)
         caption = caption.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/'/g, "&apos;").replace(/"/g, "&quot;");
         var image_name = Date.now()+userId+"_image_post.png";
 
-
-        var stream = require('stream');
-		var bufferStream = new stream.PassThrough();
-		bufferStream.end(Buffer.from(base64Data, 'base64'));
-
-		//Define bucket.
-		var myBucket = storage.bucket(process.env.GCLOUD_STORAGE_BUCKET);
-
-		//Define file & file name.
-		var file = myBucket.file("feeds_images/"+image_name);
-		//Pipe the 'bufferStream' into a 'file.createWriteStream' method.
-		bufferStream.pipe(file.createWriteStream(
-		{
-		    metadata: 
-		    {
-		      contentType: 'image/png',
-		      metadata: {
-		        custom: 'metadata'
-		      }
-		    },
-		    public: true,
-		    validation: "md5"
-		}))
-		.on('error', function(err) 
-		{
-		    res.send("fail");
-		})
-		.on('finish', function() 
+        require("fs").writeFile("public/feeds_images/"+image_name, base64Data, 'base64', function() 
 		{
 		    // The file upload is complete.
 		    /* Begin transaction */
@@ -291,8 +262,7 @@ exports.insertFeedImage = function(req, res, next)
 					}
 				});
 			});
-			/* End transaction */
-		    
+			/* End transaction */		    
 		});
 		
 	}
@@ -319,35 +289,8 @@ exports.insertFeedVideo = function(req, res, next)
         var recordedBlobs = req.body.fd;
  		var base64Data = recordedBlobs.data.replace(/^data:video\/mp4;base64,/, "");      
  		var video_name = Date.now()+userId+"_video_post.mp4";
-
-
- 		var stream = require('stream');
-		var bufferStream = new stream.PassThrough();
-		bufferStream.end(Buffer.from(base64Data, 'base64'));
-
-		//Define bucket.
-		var myBucket = storage.bucket(process.env.GCLOUD_STORAGE_BUCKET);
-
-		//Define file & file name.
-		var file = myBucket.file("feeds_video/"+video_name);
-		//Pipe the 'bufferStream' into a 'file.createWriteStream' method.
-		bufferStream.pipe(file.createWriteStream(
-		{
-		    metadata: 
-		    {
-		      contentType: 'video/mp4',
-		      metadata: {
-		        custom: 'metadata'
-		      }
-		    },
-		    public: true,
-		    validation: "md5"
-		}))
-		.on('error', function(err) 
-		{
-		    res.send("fail");
-		})
-		.on('finish', function() 
+ 
+		require("fs").writeFile("public/feeds_video/"+video_name, base64Data, 'base64', function() 
 		{
 		    // The file upload is complete.
 		    /* Begin transaction */
@@ -650,7 +593,6 @@ exports.getMyNotifications = function(req, res, next)
     }
 };
 
-
 exports.updateFeedSeen = function(req, res, next)
 {
 	var user =  req.session.user,
@@ -751,7 +693,6 @@ exports.showFeedsLikes = function(req, res, next)
 	    });
     }
 }
-
 
 /****************************liking post*********************************************/
 exports.likeTheFeed = function(req, res, next)
@@ -1082,8 +1023,6 @@ exports.insertComment = function(req, res, next)
     }
 };
 
-
-
 /**********************************get single comment****************************/
 exports.getTheSingleFeed = function(req, res, next)
 {
@@ -1162,7 +1101,6 @@ exports.deleteFeedNotification = function(req, res, next)
 
     }
 };
-
 
 /*******************get feed with its comments***********************************/
 exports.getSingleWIthComments = function(req, res, next)
